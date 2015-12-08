@@ -11,4 +11,4 @@ gem install htmlentities
 * [topstories.rb](topstories.rb) : Top Stories, you can select any section you want.
 
 ## Important
-You must have API keyes and save it in the api.rb, named it @topstorieskey and @newswirekey.
+You must have API keyes and save it in the api.rb, and named them @topstorieskey and @newswirekey.
