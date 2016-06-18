@@ -19,7 +19,7 @@ if data["status"] == "OK" then
 	puts data["copyright"]
 	puts "==================================================================="
 	puts ""
-	
+
 	# Do article
 	data["results"].each do |article|
 		puts "[Start]"
@@ -29,7 +29,7 @@ if data["status"] == "OK" then
 		puts "[End]"
 		puts ""
 	end
-	
+
 	puts "==================================================================="
 	puts data["copyright"]
 	puts ""
