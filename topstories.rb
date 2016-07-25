@@ -14,25 +14,25 @@ json = Net::HTTP.get(uri)
 data = JSON.parse(json)
 
 # Output
-if data["status"] == "OK" then
-	puts ""
-	puts data["copyright"]
-	puts "==================================================================="
-	puts ""
+if data['status'] == 'OK'
+    puts ''
+    puts data['copyright']
+    puts '==================================================================='
+    puts ''
 
-	# Do article
-	data["results"].each do |article|
-		puts "[Start]"
-		puts "=== " + HTMLEntities.new.decode(article["title"]) + " ==="
-		puts HTMLEntities.new.decode(article["abstract"])
-		puts article["url"]
-		puts "[End]"
-		puts ""
-	end
+    # Do article
+    data['results'].each do |article|
+        puts '[Start]'
+        puts '=== ' + HTMLEntities.new.decode(article['title']) + ' ==='
+        puts HTMLEntities.new.decode(article['abstract'])
+        puts article['url']
+        puts '[End]'
+        puts ''
+    end
 
-	puts "==================================================================="
-	puts data["copyright"]
-	puts ""
+    puts '==================================================================='
+    puts data['copyright']
+    puts ''
 else
-	puts "Fetch error!"
+    puts 'Fetch error!'
 end
