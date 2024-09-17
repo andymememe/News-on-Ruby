@@ -4,12 +4,12 @@ require 'json'
 require './api.rb'
 
 # Get section
-puts 'Sections(home, world, national, politics, nyregion, business, opinion, technology, science, health, sports, arts, fashion, dining, travel, magazine, realestate)'
+puts 'Sections(arts, automobiles, books/review, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world)'
 print 'Which section do you want? '
 section = gets.chomp
 
 # Fetch data
-uri = URI('http://api.nytimes.com/svc/topstories/v1/' + section + '.json?api-key=' + @topstorieskey)
+uri = URI('http://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=' + @key)
 json = Net::HTTP.get(uri)
 data = JSON.parse(json)
 

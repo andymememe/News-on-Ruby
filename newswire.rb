@@ -4,7 +4,7 @@ require 'json'
 require './api.rb'
 
 # Fetch data
-uri = URI('http://api.nytimes.com/svc/news/v3/content/nyt/all/24.json?limit=20&api-key=' + @newswirekey)
+uri = URI('http://api.nytimes.com/svc/news/v3/content/nyt/all.json?limit=20&api-key=' + @key)
 json = Net::HTTP.get(uri)
 data = JSON.parse(json)
 
